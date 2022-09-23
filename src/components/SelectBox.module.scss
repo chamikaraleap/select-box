@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    align-items: center;
+    min-height: 1.5em;
+    width: 25em;
+    border: 0.05em solid #777;
+    border-radius: 0.25em;
+    gap: 0.5em;
+    padding: 0.5em;
+    position: relative;
+    cursor: pointer;
+}
+
+.values {
+    flex-grow: 1;
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+.divider {
+    background-color: #777;
+    align-self: stretch;
+    width: 0.05em;
+}
+
+.clearBtn {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow {
+    translate: 0 25%;
+    border: 0.25em solid transparent;
+    border-top-color: #777;
+    cursor: pointer;
+}
+
+.options {
+    list-style: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: calc(100% + 0.25em);
+    border: 0.05em solid #777;
+    border-radius: 0.25em;
+    width: 100%;
+    left: 0;
+    display: none;
+}
+
+.options.show {
+    display: block;
+}
+
+.option {
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+}
+
+.option.selected {
+    background-color: hsl(200, 100%, 50%);
+}
+
+.option.highlighted {
+    background-color: hsl(200, 100%, 70%);
+    color: white;
+}
+
+.optionBadge {
+    display: flex;
+    align-items: center;
+    border: 0.05em solid #777;
+    border-radius: 0.25em;
+    padding: 0.15em 0.25em;
+    gap: 0.25em;
+    cursor: pointer;
+    background: none;
+    outline: none;
+}
+
+.optionBadge > .removeBtn {
+    font-size: 1.25em;
+    color: #777;
+}
+
+.optionBadge:hover,
+.optionBadge:focus {
+    background-color: hsl(0, 100%, 90%);
+    border-color: hsl(0, 100%, 50%);
+}
+
+.optionBadge:hover > .removeBtn,
+.optionBadge:focus > .removeBtn {
+    color: hsl(0, 100%, 50%);
+}
